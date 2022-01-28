@@ -1,6 +1,9 @@
 import React from 'react';
 import './navbar.css';
 
+//import du package react-scroll pour les divers sections du portfolio
+
+
 
 const Navbar = () => (
   <div className='navbar'>
