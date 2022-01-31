@@ -1,9 +1,9 @@
 import './App.css';
 
-//DesignComponents
-import CardIllustration from './DesignComponents/CardIllustration/cardIllustation';
+
 //Components
 import Navbar from '../src/Components/NavBar';
+import HomePage from '../src/Components/HomePage';
 import Projets from '../src/Components/Projets';
 import APropos from '../src/Components/APropos';
 import Contact from './Components/Contact';
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <CardIllustration/>
+      <HomePage />
       <Projets />
       <APropos />
       <Contact />

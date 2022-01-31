@@ -1,24 +1,19 @@
-#navbar{
- 
-}
-.nav-content{
- display:flex;
- align-items:right;
-}
-.nav_items{
-  height:40px;
+.nav-content {
   display: flex;
-  list-style: none;
-  text-align: right;
-  line-height:40px;
+  justify-content: end;
+  height: 40px;
+  vertical-align: center;
 }
 
-.nav-link{
+.nav_items {
+  list-style: none;
+}
+
+.nav-link {
   margin: 1rem;
   color: #fff;
   font-weight: 900;
   font-size: 1rem;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
 
