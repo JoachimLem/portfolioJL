@@ -1,4 +1,4 @@
-.homePageContainer {
+.homePage {
   background-image: url(/public/assets/images/homepage.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,19 +44,27 @@
 }
 /* ******************************** */
 
+/* Container section */
+.homePage-container {
+  display: flex; 
+  justify-content:space-around ;
+  align-items: center;
+  height: 100%;
+}
+
+.container-left{
+  width: 40%;
+}
 
 /* Title */
 .title {
-  width: 50%;
-  position: absolute;
-  top: 20%;
-  left: 0;
+
   text-align: left;
   color: white;
 }
 
 .main-title {
-  width: 100%;
+  
   text-align: center;
   font-size: 5rem;
   font-weight: 1000;
@@ -73,11 +81,6 @@
 
 /* Descritpion */
 .description {
-  width: 40%;
-  position: absolute;
-  bottom: 20%;
-  left: 5%;
-  display: block;
   text-align: center;
   color: white; 
 }
@@ -85,14 +88,12 @@
 
 
 /* Circle Photo */
-.circlePhoto {
+.circle-photo {
 background-image:url(/public/assets/images/digitalphoto.png);
 background-repeat:no-repeat;
 background-size: cover;
 transform: rotate(-8deg);
-width: 700px;
-height:700px;
-position: absolute;
-right: 10%;
-bottom: 10%;
+width: 30rem;
+height: 30rem;
+
 }

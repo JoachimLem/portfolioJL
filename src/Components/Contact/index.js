@@ -1,8 +1,8 @@
 import React from 'react';
 import './contact.css';
 
-const Contact = () => (
-  <div className='container'>Contact</div>
+const Contact = ({id}) => (
+  <div className='container' id={id}>Contact</div>
 );
 
 export default Contact;
