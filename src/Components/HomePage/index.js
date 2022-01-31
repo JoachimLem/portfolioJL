@@ -22,7 +22,7 @@ const HomePage = () => {
 
       {/* Title */}
       <div className="title">
-        <h1 className="main-title">Développeur Front-End</h1>
+        <h1 className="main-title">Développeur <br/>Front-End</h1>
         <h2 className="secondary-title">Bienvenue sur mon Portfolio</h2>
       </div>
       {/* ******************************************* */}
@@ -35,6 +35,9 @@ ou bien encore site vitrine.
 Si vous souhaitez gagner en visibilité dans le monde digital, je peux vous aider à y parvenir.</p>
       {/* ******************************************* */}
 
+
+    {/* Circle photo */}
+      <div className="circlePhoto"></div>
     </div>
     
   )
