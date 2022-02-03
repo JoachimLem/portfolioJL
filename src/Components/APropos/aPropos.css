@@ -1,6 +1,19 @@
-.container{
-  background-color:blue;
-  width:1000px;
-  height:800px;
+.ap-container{
+  max-width:100%;
+  min-height:100vh;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.profil{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.photo{
+  min-width: 50%;
+
 }
 
