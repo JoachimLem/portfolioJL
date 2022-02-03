@@ -13,7 +13,16 @@
   margin: 1rem;
   color: #fff;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  line-height: 40px;
+  padding:0.5rem;
 }
+.nav-link:hover {
+  border-bottom: 3px solid #6636dd;
+  font-weight:1000;
+
+}
+
 

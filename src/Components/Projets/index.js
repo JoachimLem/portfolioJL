@@ -1,8 +1,12 @@
 import React from 'react';
 import './projets.css';
+import Card from '../CardProject/index';
 
 const Projets = ({ id }) => (
-  <section className='container' id={id}>Projets</section>
+  <section className='projet-container' id={id}>Projets
+  <Card />
+  
+  </section>
 );
 
 export default Projets;

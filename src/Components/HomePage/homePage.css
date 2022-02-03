@@ -42,18 +42,25 @@
   font-size: 2rem;
   line-height: 116px;
 }
+
 /* ******************************** */
 
 /* Container section */
 .homePage-container {
-  display: flex; 
-  justify-content:space-around ;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-.container-left{
+.container-left {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+
 }
 
 /* Title */
@@ -64,7 +71,7 @@
 }
 
 .main-title {
-  
+
   text-align: center;
   font-size: 5rem;
   font-weight: 1000;
@@ -75,6 +82,7 @@
   font-size: 2rem;
   font-weight: 1000;
 }
+
 /* ******************************** */
 
 
@@ -82,18 +90,21 @@
 /* Descritpion */
 .description {
   text-align: center;
-  color: white; 
+  color: white;
 }
+
 /* ******************************** */
 
+.container-right {
+  text-align: center;
+}
 
 /* Circle Photo */
 .circle-photo {
-background-image:url(/public/assets/images/digitalphoto.png);
-background-repeat:no-repeat;
-background-size: cover;
-transform: rotate(-8deg);
-width: 30rem;
-height: 30rem;
-
+  background-image: url(/public/assets/images/digitalphoto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(-8deg);
+  width: 36rem;
+  height: 36rem;
 }
