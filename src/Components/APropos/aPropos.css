@@ -1,19 +1,54 @@
-.ap-container{
-  max-width:100%;
-  min-height:100vh;
-  color:#fff;
+.ap-container {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 2rem;
+  color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-.profil{
-  display:flex;
+.profil {
+  display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
-.photo{
+.photo {
   min-width: 50%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.picture {
+  width: 20rem;
+  height: 20rem;
+  background-image: url(/public/assets/images/digitalphoto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Description profil  */
+.profil-description {
+  text-align: left;
+}
+
+
+.name {
+  font-size: xx-large;
+}
+
+.city {
+  font-size: x-large;
+}
+
+.about {
+  font-size: x-large;
+  text-align: justify;
+}
+
+.network {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
