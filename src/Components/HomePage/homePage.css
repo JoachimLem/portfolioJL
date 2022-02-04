@@ -10,7 +10,10 @@
 
 
 /* Logo DEV style */
-
+.logo-homePage{
+  position: relative;
+  top: 0;
+}
 
 /* ******************************** */
 

@@ -19,7 +19,7 @@ const HomePage = ({ id }) => {
     <section className='homePage' id={id}>
 
       {/* Logo dev  */}
-      <div className='logo'>
+      <div className='logo-homePage'>
         <Logo
           textLogo={textLogo}
         />

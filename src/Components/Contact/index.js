@@ -49,7 +49,7 @@ const Contact = ({ id }) => {
             <option value="Autres">Autres</option>
           </select>
 
-          <input className="submitButton" type="submit" value="Send" />
+          <input className="submitButton" type="submit" value="Envoyer" />
         </form>
 
         </div>
