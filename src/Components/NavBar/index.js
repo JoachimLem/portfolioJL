@@ -2,12 +2,21 @@ import React from 'react';
 import './navbar.css';
 
 //import du package react-scroll pour les divers sections du portfolio
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
+import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
+
+const textLogo = {
+  text: "Développeur Web/Mobile",
+  abv: "DEV"
+};
 
 const Navbar = () => (
   <nav className='nav' id='navbar'>
     <div className='nav-content'>
+      <MiniLogo
+        textLogo={textLogo}
+      />
       <ul className='nav_items'>
         <Link
           activeClass="active"
@@ -33,30 +42,30 @@ const Navbar = () => (
         </Link>
 
 
-        <Link 
-        className='nav-link'
-        activeClass="active"
-        to='apropos'
-        spy={true}
-        smooth={true}
-        duration={500}
+        <Link
+          className='nav-link'
+          activeClass="active"
+          to='apropos'
+          spy={true}
+          smooth={true}
+          duration={500}
         >
           À propos
-          </Link>
+        </Link>
 
 
         <Link
-        className='nav-link'
-        activeClass="active"
-        to='contact'
-        spy={true}
-        smooth={true}
-        duration={500}
+          className='nav-link'
+          activeClass="active"
+          to='contact'
+          spy={true}
+          smooth={true}
+          duration={500}
         >
           Contact
         </Link>
 
-        
+
       </ul>
       {/* <span className='navbar-link'>Accueil</span>
     <span className='navbar-link'>Projets</span>

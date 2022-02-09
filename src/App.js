@@ -8,7 +8,6 @@ import Projets from '../src/Components/Projets';
 import APropos from '../src/Components/APropos';
 import Contact from './Components/Contact';
 
-
 function App() {
   return (
     <div className="App">
@@ -24,8 +23,7 @@ function App() {
       />
       <Contact 
       id="contact"
-      />
-     
+      />     
   
     </div>
   );

@@ -7,6 +7,9 @@ import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
 import { IconContext } from 'react-icons';
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 
+//import Scroll to top
+import ScrollToTop from '../ScrollToTop';
+
 
 // Text for Mini-logo
 const textLogo = {
@@ -51,6 +54,7 @@ const APropos = ({ id }) => (
       </div>
 
     </div>
+      <ScrollToTop />
 
 
   </section>

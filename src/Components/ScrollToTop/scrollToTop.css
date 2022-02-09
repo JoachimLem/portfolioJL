@@ -1,0 +1,14 @@
+.index-container{
+  text-align: right;
+ margin-right: 2rem;
+ background-color:black;
+}
+
+.index{
+  display: inline-block;
+  text-align: right;
+  border: 3px solid #6636dd;
+  border-radius: 50px;
+  padding:1rem;
+  cursor:pointer;
+}

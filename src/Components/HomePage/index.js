@@ -1,15 +1,10 @@
 import React from 'react';
 import './homePage.css';
 
-//import design Logo
-import Logo from '../DesignComponents/MiniLogo/miniLogo';
 
 
-// Text for Mini-logo
-const textLogo = {
-  text: "Développeur Web/Mobile",
-  abv: "DEV"
-};
+
+
 
 const HomePage = ({ id }) => {
 
@@ -18,18 +13,14 @@ const HomePage = ({ id }) => {
 
     <section className='homePage' id={id}>
 
-      {/* Logo dev  */}
-      <div className='logo-homePage'>
-        <Logo
-          textLogo={textLogo}
-        />
+    
 
 
         {/* <div className="mini-logo">
           <span className="abreviation">DEV</span>
         </div>
         <p className="logo-text">Développeur Web/Mobile</p> */}
-      </div>
+     
       {/* ******************************************* */}
 
 

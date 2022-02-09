@@ -1,8 +1,10 @@
 .nav-content {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   height: 80px;
   vertical-align: center;
+  margin-left:0.1rem;
+  margin-top: 1rem;
 }
 
 .nav_items {
@@ -16,7 +18,7 @@
   font-size: 1.2rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   cursor: pointer;
-  line-height: 40px;
+  line-height: 25px;
   padding:0.5rem;
 }
 .nav-link:hover {
