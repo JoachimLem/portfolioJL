@@ -1,10 +1,18 @@
+#nav{
+  display:flex;
+}
+
 .nav-content {
   display: flex;
-  justify-content: space-between;
   height: 80px;
   vertical-align: center;
   margin-left:0.1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  padding:0.5rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 30px;
 }
 
 .nav_items {
@@ -14,17 +22,16 @@
 .nav-link {
   margin: 1rem;
   color: #fff;
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-weight:500;
+  font-size: 1.4rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   cursor: pointer;
-  line-height: 25px;
+  line-height: 30px;
   padding:0.5rem;
 }
 .nav-link:hover {
-  border-bottom: 3px solid #6636dd;
-  font-weight:1000;
-
+  border-bottom: 1px solid #fff;
+  transition: all 2s;
 }
 
 

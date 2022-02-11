@@ -12,6 +12,8 @@ import ScrollToTop from '../ScrollToTop';
 //import Carroussel
 import Slider from './Slider';
 
+import Fade from 'react-reveal/Fade';
+
 
 
 // Text for Mini-logo
@@ -22,19 +24,23 @@ const textLogo = {
 
 
 const Projets = ({ id }) => {
- 
+
   return (
 
     <section className='projet-container' id={id}>
 
       {/* Logo */}
-      <div className="logo-project">
-        <MiniLogo
-          textLogo={textLogo}
-        />
-      </div>
+      <Fade left delay={800}>
+        <div className="logo-project">
+          <MiniLogo
+            textLogo={textLogo}
+          />
+        </div>
+      </Fade>
       {/* ......................... */}
-      <Slider/>
+      <Fade bottom delay={1500} duration={1500}>
+        <Slider />
+      </Fade>
       <ScrollToTop />
     </section>
   )

@@ -3,6 +3,8 @@ import './contact.css';
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
 
+import Fade from 'react-reveal/Fade';
+
 import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
 
 //import Scroll to top
@@ -34,27 +36,31 @@ const Contact = ({ id }) => {
 
   return (
     <section className="contact-container" id={id}>
+      <Fade left delay={800}>
+        <MiniLogo
+          textLogo={textLogo}
+        />
+      </Fade>
 
-      <MiniLogo
-        textLogo={textLogo}
-      />
+
       <div className="form-container">
-        <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
-          <input className="input" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
-          <input className="input" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
-          <input className="input" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-          <textarea className="input" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
-          <select className="input" {...register("what", { required: true })}>
-            <option value="" >Veuillez préciser l'objet de votre message</option>
-            <option value="Offre d'emploi">Offre d'emploi</option>
-            <option value="Commentaires">Commentaires</option>
-            <option value="Signaler un bug">Signaler un bug</option>
-            <option value="Autres">Autres</option>
-          </select>
+        <Fade bottom delay={1500} duration={1500}>
+          <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
+            <input className="input" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
+            <input className="input" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
+            <input className="input" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <textarea className="input" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
+            <select className="input" {...register("what", { required: true })}>
+              <option value="" >Veuillez préciser l'objet de votre message</option>
+              <option value="Offre d'emploi">Offre d'emploi</option>
+              <option value="Commentaires">Commentaires</option>
+              <option value="Signaler un bug">Signaler un bug</option>
+              <option value="Autres">Autres</option>
+            </select>
+            <input className="submitButton" type="submit" value="Envoyer" />
+          </form>
+        </Fade>
 
-          <input className="submitButton" type="submit" value="Envoyer" />
-        </form>
-        
         <ScrollToTop />
 
       </div>

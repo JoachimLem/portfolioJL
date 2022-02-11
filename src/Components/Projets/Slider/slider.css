@@ -1,3 +1,8 @@
+ .container-button{
+   position: relative;
+ }
+
+
 .container-slider {
   max-width: 80%;
   height: 70vh;
@@ -92,12 +97,12 @@
 }
 .prev {
   top: 50%;
-  left: 20px;
+  left: 5%;
   transform: translateY(-60%);
 }
 .next {
   top: 50%;
-  right: 20px;
+  right: 5%;
   transform: translateY(-60%);
 }
 

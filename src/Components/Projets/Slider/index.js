@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './slider.css';
-
 import BtnSlider from './BtnSlider';
 
 
@@ -91,49 +90,54 @@ export default function Slider() {
 
   const moveDot = index => {
     setSlideAnim({ index: index, inProgress: false })
-  }
+  };
+
+
   return (
-    <div className="container-slider">
-
-      {/* map sur le tableaux de project pour créer les slides */}
-      {cardsProjects.map((obj, index) => {
-        return <div
-          key={obj.id}
-          className={slideAnim.index === index + 1 ? "slide active-anim" : "slide"}
-        >
+    <div className="container-button">
+      <BtnSlider moveSlide={nextSlide} direction={"next"} />
+      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+      <div className="container-slider">
 
 
-          <div className="slide-left">
-            <img src={process.env.PUBLIC_URL + obj.image} alt="projet" />
+
+        {/* map sur le tableaux de project pour créer les slides */}
+        {cardsProjects.map((obj, index) => {
+          return <div
+            key={obj.id}
+            className={slideAnim.index === index + 1 ? "slide active-anim" : "slide"}
+          >
+
+
+            <div className="slide-left">
+              <img src={process.env.PUBLIC_URL + obj.image} alt="projet" />
+            </div>
+
+
+
+            <div className="slide-right">
+              <h1 className="slide-right title"> {obj.title} </h1>
+              <p className="slide-right description"> {obj.description} </p>
+              <button className="slide-right discover"> Découvrir</button>
+            </div>
+
+
+
+
+            {/* Dots  */}
+            <div className="container-dots">
+              {Array.from({ length: cardsProjects.length }).map((item, index) => {
+                return <div key={index} className={slideAnim.index === index + 1 ? "dot active" : "dot"}
+                  onClick={() => moveDot(index + 1)}
+                >
+                </div>
+              })}
+            </div>
+
           </div>
+        })}
 
-
-
-          <div className="slide-right">
-            <h1 className="slide-right title"> {obj.title} </h1>
-            <p className="slide-right description"> {obj.description} </p>
-            <button className="slide-right discover"> Découvrir</button>
-          </div>
-
-          
-          <BtnSlider moveSlide={nextSlide} direction={"next"} />
-          <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-
-
-
-          {/* Dots  */}
-          <div className="container-dots">
-            {Array.from({ length: cardsProjects.length }).map((item, index) => {
-              return <div key={index} className={slideAnim.index === index + 1 ? "dot active" : "dot"}
-                onClick={() => moveDot(index + 1)}
-              >
-              </div>
-            })}
-          </div>
-
-        </div>
-      })}
-
+      </div>
     </div>
   )
 }
