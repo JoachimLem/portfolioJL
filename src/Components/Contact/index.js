@@ -43,8 +43,8 @@ const Contact = ({ id }) => {
       </Fade>
 
 
-      <div className="form-container">
         <Fade bottom delay={1500} duration={1500}>
+      <div className="form-container">
           <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
             <input className="input" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
             <input className="input" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
@@ -59,11 +59,11 @@ const Contact = ({ id }) => {
             </select>
             <input className="submitButton" type="submit" value="Envoyer" />
           </form>
-        </Fade>
 
         <ScrollToTop />
 
       </div>
+        </Fade>
 
     </section>
   );
