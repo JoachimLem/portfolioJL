@@ -18,6 +18,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
+  position: relative;
 }
 
 /* Title */
@@ -29,7 +31,7 @@
   margin: 0;
   padding:0.5rem;
   text-align: center;
-  font-size: 6rem;
+  font-size: 12vh;
   font-weight: 1000;
   line-height: 130%;
 }
@@ -39,7 +41,7 @@
   padding: 0.5rem;
   margin-bottom:2rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4vh;
   font-weight: 1000;
 }
 
@@ -50,18 +52,18 @@
 /* Descritpion */
 .description {
   color: white;
-  font-size:1.5rem;
+  font-size:2vh;
   text-align: justify;
   padding:0.5em;
+  position: absolute;
+  bottom: 0;
 }
 
 /* ******************************** */
 
 .container-right {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 2rem, 5rem;
 }
 
 
@@ -71,7 +73,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotate(-8deg);
-  width: 40rem;
-  height: 40rem;
+  width: 60vh;
+  height: 60vh;
 
 }

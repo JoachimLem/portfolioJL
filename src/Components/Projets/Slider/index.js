@@ -117,8 +117,8 @@ export default function Slider() {
 
             <div className="slide-right">
               <h1 className="slide-right-title"> {obj.title} </h1>
-              <p className="slide-right description"> {obj.description} </p>
-              <button className="slide-right discover"> Découvrir</button>
+              <p className="slide-right-description"> {obj.description} </p>
+              <button className="slide-right-discover"> Découvrir</button>
             </div>
 
 
