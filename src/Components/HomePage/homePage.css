@@ -9,28 +9,19 @@
 
 /* Container section */
 .homePage-container {
-  width: 100%;
-  height: 80%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0;
+  height: 80%;
 }
 
 .container-left {
-  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
- height: 50%;
-  padding: 0,5em;
-
+  justify-content: center;
 }
 
 /* Title */
 .title {
-  text-align: left;
   color: white;
 }
 
