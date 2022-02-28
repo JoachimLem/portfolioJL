@@ -29,7 +29,9 @@ const APropos = ({ id }) => (
       />
     </Fade>
 
-
+  <div>
+    
+  </div>
     <div className='profil'>
 
       <Fade left delay={1500} duration={1500}>
