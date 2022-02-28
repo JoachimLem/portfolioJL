@@ -8,11 +8,18 @@ import { Link } from 'react-scroll';
 import Fade from 'react-reveal/Fade';
 
 
+// function to menu scroll hidden 
+ const ScrollNavBar = () => {
+   console.log('je scoll');
+ };
+
+
+
 
 
 
 const Navbar = () => (
-  <div className='nav' id='navbar'>
+  <div className='nav' id='navbar' onScroll={ScrollNavBar}>
     <nav >
       <Fade top delay={3000} duration={1000}>
         <div className='nav-content'>

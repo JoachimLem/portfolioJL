@@ -4,6 +4,7 @@ import './homePage.css';
 import Fade from 'react-reveal/Fade';
 import Rotate from 'react-reveal/Rotate';
 
+
 import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
 
 const textLogo = {
