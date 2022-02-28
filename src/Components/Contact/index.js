@@ -43,14 +43,14 @@ const Contact = ({ id }) => {
       </Fade>
 
 
-        <Fade bottom delay={1500} duration={1500}>
-      <div className="form-container">
+      <Fade bottom delay={1500} duration={1500}>
+        <div className="form-container">
           <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
-            <input className="input" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
-            <input className="input" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
-            <input className="input" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-            <textarea className="input" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
-            <select className="input" {...register("what", { required: true })}>
+            <input className="input_style" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
+            <input className="input_style" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
+            <input className="input_style" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <textarea className="input_style" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
+            <select className="input_style" {...register("what", { required: true })}>
               <option value="" >Veuillez préciser l'objet de votre message</option>
               <option value="Offre d'emploi">Offre d'emploi</option>
               <option value="Commentaires">Commentaires</option>
@@ -60,10 +60,9 @@ const Contact = ({ id }) => {
             <input className="submitButton" type="submit" value="Envoyer" />
           </form>
 
-        <ScrollToTop />
-
-      </div>
-        </Fade>
+        </div>
+      </Fade>
+      <ScrollToTop />
 
     </section>
   );

@@ -4,7 +4,14 @@ import './homePage.css';
 import Fade from 'react-reveal/Fade';
 import Rotate from 'react-reveal/Rotate';
 
+
+
+
 import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
+
+
+//test scroll
+import { animateScroll as scroll } from "react-scroll"
 
 const textLogo = {
   text: "Développeur Web/Mobile",
@@ -17,9 +24,21 @@ const textLogo = {
 const HomePage = ({ id }) => {
 
 
+  const scrollToSection = () => {
+    
+      scroll.scrollTo("projet-container", {
+        delay: 0,
+        smooth: "easeInOutQuart",
+      
+      });   
+    console.log('je tourne a roue')
+  };
+
+
+
   return (
 
-    <section className='homePage' id={id}>
+    <section className='homePage' id={id} onWheel={scrollToSection} >
 
       <Fade top delay={1500} duration={1000}>
         <MiniLogo
@@ -27,7 +46,7 @@ const HomePage = ({ id }) => {
         />
       </Fade>
 
-      <div className='homePage-container'>
+      <div className='homePage-container' >
         {/* Container Left  */}
         <div className='container-left'>
           {/* Title */}
