@@ -51,8 +51,14 @@ const APropos = ({ id }) => (
         </Fade>
 
         <Fade right delay={2100}>
-          <p className='about'>Occaecat consectetur dolore velit reprehenderit exercitation aute ipsum tempor magna ut. Cillum aliqua eiusmod ad et nulla occaecat fugiat enim. Deserunt eiusmod pariatur ex occaecat occaecat esse dolore do nisi nisi.
-            Est adipisicing exercitation dolore dolor commodo. Adipisicing commodo aliquip velit fugiat minim reprehenderit ea do adipisicing excepteur consequat ex magna. Incididunt labore irure labore qui.
+          <p className='about'>Jeune développeur je me spécialise dans le travail front end, plus particulièrement sur la librairie React.
+
+Je connais également l'environnement NodeJS pour le travail en back-end, le SGBD postgreSQL pour la création de base de données.
+
+Je m'intéresse aussi au WebDesign via des outils comme Figma ou Canva.
+
+Vous pouvez me contacter via le formulaire de contact et je ne manquerai pas de vous répondre dans les meilleurs délais.
+À Bientôt.
           </p>
         </Fade>
 
