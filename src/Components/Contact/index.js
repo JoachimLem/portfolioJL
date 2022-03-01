@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './contact.css';
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
@@ -18,21 +18,35 @@ const textLogo = {
 
 
 const Contact = ({ id }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit} = useForm();
   //ref for emailjs 
   const form = useRef();
 
+  const [messageSuccess, setMessageSuccess] = useState(false);
+  const [messageError,setMessageError] = useState(false);
+
   const onSubmit = () => {
-
-
     emailjs.sendForm('contact', 'template_eks5mqv', form.current, 'user_Ox708skvp8Fq1Tnhi5YPB')
       .then((result) => {
         console.log(result.text);
+        setMessageSuccess(true);
+        setMessageError(false);
+
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1500);
+
       }, (error) => {
         console.log(error.text);
+        setMessageError(true);
+        console.log(error);
       });
   };
-  console.log(errors);
+
+
+
+
+
 
   return (
     <section className="contact-container" id={id}>
@@ -46,11 +60,11 @@ const Contact = ({ id }) => {
       <Fade bottom delay={1500} duration={1500}>
         <div className="form-container">
           <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
-            <input className="input_style" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80 })} />
-            <input className="input_style" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100 })} />
-            <input className="input_style" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-            <textarea className="input_style" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
-            <select className="input_style" {...register("what", { required: true })}>
+            <input required className="input_style" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80,  pattern: /[A-Za-z]/ })} />
+            <input required className="input_style" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100,  pattern: /[A-Za-z]/ })} />
+            <input required className="input_style" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <textarea required className="input_style" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
+            <select required className="input_style" {...register("what", { required: true })}>
               <option value="" >Veuillez préciser l'objet de votre message</option>
               <option value="Offre d'emploi">Offre d'emploi</option>
               <option value="Commentaires">Commentaires</option>
@@ -58,6 +72,10 @@ const Contact = ({ id }) => {
               <option value="Autres">Autres</option>
             </select>
             <input className="submitButton" type="submit" value="Envoyer" />
+
+            {messageSuccess && <p className='form_success'>Merci, votre message a été envoyé</p>}
+            {messageError && <p className='form_error'>Une erreur à été rencontrée.</p>}
+
           </form>
 
         </div>
