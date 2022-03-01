@@ -17,24 +17,30 @@ const textLogo = {
 };
 
 
+// DOTENV variables
+const service = process.env.REACT_APP_EMAILJS_SERVICE;
+const template = process.env.REACT_APP_EMAILJS_TEMPLATE;
+const user = process.env.REACT_APP_EMAILJS_USER;
+
+
 const Contact = ({ id }) => {
-  const { register, handleSubmit} = useForm();
+  const { register, handleSubmit } = useForm();
   //ref for emailjs 
   const form = useRef();
 
   const [messageSuccess, setMessageSuccess] = useState(false);
-  const [messageError,setMessageError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
   const onSubmit = () => {
-    emailjs.sendForm('contact', 'template_eks5mqv', form.current, 'user_Ox708skvp8Fq1Tnhi5YPB')
+    emailjs.sendForm(service, template, form.current, user)
       .then((result) => {
         console.log(result.text);
         setMessageSuccess(true);
         setMessageError(false);
-
-        setTimeout(() => {
-          window.location.href = '/';
-        }, 1500);
+      
+        // setTimeout(() => {
+        //   window.location.href = '/';
+        // }, 1500);
 
       }, (error) => {
         console.log(error.text);
@@ -60,8 +66,8 @@ const Contact = ({ id }) => {
       <Fade bottom delay={1500} duration={1500}>
         <div className="form-container">
           <form ref={form} className="form" onSubmit={handleSubmit(onSubmit)}>
-            <input required className="input_style" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80,  pattern: /[A-Za-z]/ })} />
-            <input required className="input_style" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100,  pattern: /[A-Za-z]/ })} />
+            <input required className="input_style" type="text" placeholder="Prénom" {...register("firstName", { required: true, maxLength: 80, pattern: /[A-Za-z]/ })} />
+            <input required className="input_style" type="text" placeholder="Nom" {...register("lastName", { required: true, maxLength: 100, pattern: /[A-Za-z]/ })} />
             <input required className="input_style" type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
             <textarea required className="input_style" placeholder="Message" {...register("message", { required: true, maxLength: 250 })} />
             <select required className="input_style" {...register("what", { required: true })}>
@@ -74,7 +80,7 @@ const Contact = ({ id }) => {
             <input className="submitButton" type="submit" value="Envoyer" />
 
             {messageSuccess && <p className='form_success'>Merci, votre message a été envoyé</p>}
-            {messageError && <p className='form_error'>Une erreur à été rencontrée.</p>}
+            {messageError && <p className='form_error'>Une erreur a été rencontrée.</p>}
 
           </form>
 
