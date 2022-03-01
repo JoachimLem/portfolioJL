@@ -38,9 +38,9 @@ const Contact = ({ id }) => {
         setMessageSuccess(true);
         setMessageError(false);
       
-        // setTimeout(() => {
-        //   window.location.href = '/';
-        // }, 1500);
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1500);
 
       }, (error) => {
         console.log(error.text);
