@@ -47,11 +47,4 @@ const Projets = ({ id }) => {
 };
 
 export default Projets;
-//  <div className='project'>
-//   {cardsProjects.map((project) => (
-//     <Card
-//       project={project}
-//       key={project.title}
-//     />
-//   ))}
-// </div> 
+
