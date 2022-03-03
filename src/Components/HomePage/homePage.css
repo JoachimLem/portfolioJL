@@ -101,6 +101,9 @@
     align-items: center;
     height: 100vh;
   }
+  .homePage-logo{
+    display: none;
+  }
 
   .container-right{
     padding-top: 2rem;

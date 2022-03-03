@@ -25,12 +25,12 @@ const HomePage = ({ id }) => {
 
 
   const scrollToSection = () => {
-    
-      scroll.scrollTo("projet-container", {
-        delay: 0,
-        smooth: "easeInOutQuart",
-      
-      });   
+
+    scroll.scrollTo("projet-container", {
+      delay: 0,
+      smooth: "easeInOutQuart",
+
+    });
     console.log('je tourne a roue')
   };
 
@@ -41,9 +41,12 @@ const HomePage = ({ id }) => {
     <section className='homePage' id={id} onWheel={scrollToSection} >
 
       <Fade top delay={1500} duration={1000}>
-        <MiniLogo
-          textLogo={textLogo}
-        />
+        <div className='homePage-logo'>
+          <MiniLogo
+            textLogo={textLogo}
+          />
+        </div>
+
       </Fade>
 
       <div className='homePage-container' >
