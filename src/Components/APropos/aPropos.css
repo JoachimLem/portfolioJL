@@ -60,3 +60,31 @@
   justify-content: space-between;
   margin-bottom: 5rem;
 }
+/*************************************/
+/*************************************/
+/*************************************/
+
+/*Mobile version*/
+
+@media screen and (max-width:500px) {
+  .profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .about {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  
+  .network {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+
+}
