@@ -29,4 +29,15 @@
   border-bottom: 1px solid #fff;
 }
 
+/*************************************/
+/*************************************/
+/*************************************/
+
+/*Mobile version*/
+@media screen and (max-width:500px){
+  .nav {
+   display: none;
+  }
+  
+}
 

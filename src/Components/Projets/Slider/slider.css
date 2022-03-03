@@ -55,12 +55,12 @@
   text-align: center;
 }
 
-.description{
+.slide-right-description{
   font-size:large;
   text-align:justify;
 }
 
-.discover{
+.slide-right-discover{
   display:inline-block;
   background-color: #6636dd;
   color: #fff;

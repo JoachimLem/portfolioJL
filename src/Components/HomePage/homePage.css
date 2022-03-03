@@ -2,7 +2,7 @@
   background-image: url(/public/assets/images/homepage.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -18,6 +18,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
+  position: relative;
 }
 
 /* Title */
@@ -29,7 +31,7 @@
   margin: 0;
   padding:0.5rem;
   text-align: center;
-  font-size: 6rem;
+  font-size: 8vw;
   font-weight: 1000;
   line-height: 130%;
 }
@@ -39,7 +41,7 @@
   padding: 0.5rem;
   margin-bottom:2rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.2vw;
   font-weight: 1000;
 }
 
@@ -50,18 +52,18 @@
 /* Descritpion */
 .description {
   color: white;
-  font-size:1.5rem;
+  font-size:1.2vw;
   text-align: justify;
   padding:0.5em;
+  position: absolute;
+  bottom: 0;
 }
 
 /* ******************************** */
 
 .container-right {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 2rem, 5rem;
 }
 
 
@@ -71,7 +73,65 @@
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotate(-8deg);
-  width: 40rem;
-  height: 40rem;
+  width: 30vw;
+  height: 30vw;
+
+}
+
+/*************************************/
+/*************************************/
+/*************************************/
+
+/*Mobile version*/
+
+@media screen and (max-width:500px) {
+
+  .homePage {
+    /* background-color: rgb(209, 131, 35); */
+    background-image: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homePage-container{
+    display: flex;
+    flex-direction: column-reverse;
+   position: relative;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container-right{
+    padding-top: 2rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .circle-photo{
+    transform: rotate(0);
+  }
+
+  .container-left{
+   width: 80vw;
+
+    justify-content: space-between;
+    position: absolute;
+    top: 30vh;
+  }
+
+  .main-title{
+    font-size: 16vw;
+  }
+
+  .secondary-title{
+    font-size: 8vw;
+  }
+
+  .description{
+    position: relative;
+    font-size: 5vw;
+  
+  }
 
 }
