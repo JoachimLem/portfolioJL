@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './aPropos.css';
 
 import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
@@ -21,7 +21,18 @@ const textLogo = {
 
 
 
-const APropos = ({ id }) => (
+const APropos = ({ id }) => {
+  const [iconSize,setIconSize] = useState("8rem");
+
+  useEffect(() => {
+    const screen = window.innerWidth;
+    if(screen<500){
+      setIconSize("3rem");
+    }
+  },[])
+
+
+  return (
   <section className='ap-container' id={id}>
     <Fade left delay={800}>
       <MiniLogo
@@ -36,7 +47,7 @@ const APropos = ({ id }) => (
 
       <Fade left delay={1500} duration={1500}>
         <div className='photo'>
-          <div className="picture"></div>
+          <div className="picture" ></div>
         </div>
 
       </Fade>
@@ -64,7 +75,7 @@ Vous pouvez me contacter via le formulaire de contact et je ne manquerai pas de 
 
         <Fade bottom delay={2500}>
           <div className='network'>
-            <IconContext.Provider value={{ color: "#6636dd", size: "8em" }}>
+            <IconContext.Provider value={{ color: "#6636dd", size: iconSize }}>
               <a className='link-network' href="https://www.linkedin.com/in/joachim-lemenager/">
                 <BsLinkedin />
               </a>
@@ -84,6 +95,6 @@ Vous pouvez me contacter via le formulaire de contact et je ne manquerai pas de 
 
 
   </section>
-);
+  )};
 
 export default APropos;
