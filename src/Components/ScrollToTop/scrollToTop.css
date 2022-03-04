@@ -1,17 +1,11 @@
 .index-container {
   text-align: right;
   background-color: black;
-  padding: 1.5rem 1rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0.5rem  0; 
- 
+  padding:0.2rem;
 }
 
 .index {
   display: inline-block;
-  text-align: right;
   border: 3px solid #6636dd;
   border-radius: 50px;
   padding: 1rem;
@@ -22,8 +16,6 @@
 @media screen and (max-width:500px) {
   .index-container {
     padding: 0.2rem;
-    margin: 0 0 1rem 0;
     padding-right: 0.5rem;
-    text-align: center; 
   }
   }

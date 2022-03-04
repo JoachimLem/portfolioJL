@@ -81,12 +81,13 @@ const Contact = ({ id }) => {
 
             {messageSuccess && <p className='form_success'>Merci, votre message a été envoyé</p>}
             {messageError && <p className='form_error'>Une erreur a été rencontrée.</p>}
-
           </form>
 
         </div>
       </Fade>
+     
       <ScrollToTop />
+    
 
     </section>
   );
