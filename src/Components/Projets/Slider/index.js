@@ -177,7 +177,7 @@ export default function Slider() {
 
           <div className='swiper'>
             <Swiper
-              spaceBetween={50}
+              spaceBetween={30}
               slidesPerView={1}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
@@ -185,7 +185,7 @@ export default function Slider() {
               {cardsProjects.map((item) => {
                 return (
               <SwiperSlide key={item.id}>
-                <div className='swiper-image'>
+                <div className='swiper_image'>
                   <div className='swiper-description'>
                     <h1 className='swiper-title'>{item.title}</h1>
                     <p className='swiper-text'>{item.description}</p>
