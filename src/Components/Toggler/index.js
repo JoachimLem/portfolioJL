@@ -30,7 +30,7 @@ const Toggler = () => {
 
       <nav className={isToggled ? 'toggler_nav_open' : 'toggler_nav'}>
         <div className='toggler_menu'>
-          <ul >
+          <ul className='list-menu' >
             <Link
               activeClass="active"
               to='accueil'
