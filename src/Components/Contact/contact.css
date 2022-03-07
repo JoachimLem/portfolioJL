@@ -84,17 +84,16 @@
 
 
   .input_style{
-    background-color:black;
-    font-size:1rem;
+    font-size:5vw;
     font-weight:700;
-    margin: 1.5rem;  
+    margin: 1rem;  
   }
 
   .submitButton{
     margin-top: 1rem;
     padding: 1rem 1.5rem;
     border-style: none;
-    font-size: 1rem;
+    font-size: 5vw;
     font-weight: 700;
   }
  
