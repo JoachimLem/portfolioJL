@@ -25,6 +25,7 @@
 /* Title */
 .title {
   color: white;
+  text-shadow: 4px 3px 6px rgb(110, 108, 108);
 }
 
 .main-title {
@@ -57,6 +58,7 @@
   padding:0.5em;
   position: absolute;
   bottom: 0;
+  text-shadow: 3px 2px 6px rgb(110, 108, 108);
 }
 
 /* ******************************** */
@@ -75,7 +77,6 @@
   transform: rotate(-8deg);
   width: 30vw;
   height: 30vw;
-
 }
 
 /*************************************/

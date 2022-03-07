@@ -10,7 +10,6 @@ import Fade from 'react-reveal/Fade';
 
 // function to menu scroll hidden 
  const ScrollNavBar = () => {
-   console.log('je scoll');
  };
 
 

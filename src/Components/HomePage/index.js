@@ -7,6 +7,7 @@ import Rotate from 'react-reveal/Rotate';
 
 
 
+
 import MiniLogo from '../DesignComponents/MiniLogo/miniLogo';
 
 
@@ -39,7 +40,7 @@ const HomePage = ({ id }) => {
   return (
 
     <section className='homePage' id={id} onWheel={scrollToSection} >
-
+      
       <Fade top delay={1500} duration={1000}>
         <div className='homePage-logo'>
           <MiniLogo

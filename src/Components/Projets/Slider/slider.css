@@ -1,173 +1,202 @@
- .container-button{
+ .container-button {
    position: relative;
  }
 
 
-.container-slider {
-  max-width: 80%;
-  height: 70vh;
-  margin: 1rem auto ;
-  padding-bottom: 1rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(243, 240, 240, 0.2);
-  border: 2px solid #6636dd;
-  border-radius: 10px;
-}
-@media screen and (max-width: 700px){
-  .container-slider {
-    margin: 100px 10px 0;
-  }
-}
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  transition: opacity ease-in-out 0.4s;
-  display: flex;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.active-anim {
-  opacity: 1;
- 
-}
+ .container-slider {
+   max-width: 80%;
+   height: 70vh;
+   margin: 1rem auto;
+   padding-bottom: 1rem;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 10px 20px rgba(243, 240, 240, 0.2);
+   border: 2px solid #6636dd;
+   border-radius: 10px;
+ }
 
-/* slider composition inside */
+ @media screen and (max-width: 700px) {
+   .container-slider {
+     margin: 100px 10px 0;
+   }
+ }
 
-.slide-right{
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:space-between;
-  width: 70%;
-  font-family: 'Poppins', sans-serif;
-}
+ .slide {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   opacity: 0;
+   transition: opacity ease-in-out 0.4s;
+   display: flex;
+ }
 
-.slide-right-title{
-  color:white;
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: center;
-}
+ .slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
 
-.slide-right-description{
-  font-size:large;
-  text-align:justify;
-}
+ .active-anim {
+   opacity: 1;
 
-.slide-right-discover{
-  display:inline-block;
-  background-color: #6636dd;
-  color: #fff;
-  font-size: 2rem;
-  font-weight:bold;
-  margin-bottom:1rem;
-  padding:0.5rem;
-  cursor: pointer;
-  border-radius: 20px;
-  
-}
+ }
 
+ /* slider composition inside */
 
+ .slide-right {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   width: 70%;
+   font-family: 'Poppins', sans-serif;
+   color: white;
+   text-shadow: 4px 3px 6px rgb(110, 108, 108);
+ }
 
-/* ............................. */
+ .slide-right-title {
+   font-size: 3rem;
+   font-weight: 900;
+   text-align: center;
+ }
 
-.btn-slide {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #f1f1f1;
-  border: 1px solid rgba(34, 34, 34, 0.287);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 0
-}
+ .slide-right-description {
+   font-size: large;
+   text-align: justify;
+   margin: 1.5rem;
+   font-weight: 900;
+   line-height: 1.5rem;
+ }
 
-.btn-slide img {
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
-}
-.prev {
-  top: 50%;
-  left: 5%;
-  transform: translateY(-60%);
-}
-.next {
-  top: 50%;
-  right: 5%;
-  transform: translateY(-60%);
-}
-
-
-.container-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-.dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid #f1f1f1;
-  margin: 0 5px;
-  background: #f1f1f1;
-}
-.dot.active {
-  background: #6636dd;
-}
-
-.swiper{
-  display: none;
-}
-
-@media screen and (max-width:500px) {
-  .container-button{
-    display: none;
-  }
-  .swiper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   width: 90%;
-   height:70vh;
+ .slide-right-discover {
+   display: inline-block;
+   background-color: #6636dd;
    color: #fff;
-   margin: 2rem;
+   font-size: 2rem;
+   font-weight: bold;
+   margin-bottom: 1.5rem;
+   padding: 0.5rem;
+   cursor: pointer;
+   border-radius: 20px;
+   transition: all 0.5s ease-out;	
+ }
 
-  
-  
-  }
-  
-  .swiper_image{
-    background-image: url(/public/assets/images/workInProgress.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 95%;
-    height: 90%;
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
-    border: solid 2px #6636dd;
-    border-radius : 5px;
-  }
+ .slide-right-discover:hover {
+   border: 2px solid white;
+   transition-delay: .2s;
+ }
 
-  .swiper-text{
-    text-align: justify;
-    margin:0;
-    padding: 1rem;
-    background-color:rgba(243, 240, 240, 0.2);
+
+
+ /* ............................. */
+
+ .btn-slide {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: #f1f1f1;
+   border: none;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   padding: 0;
+ }
+
+ .btn-slide:hover {
+   border: 3px solid white;
+ }
+
+ .btn-slide img {
+   width: 20px;
+   height: 20px;
+   pointer-events: none;
+ }
+
+ .prev {
+   top: 50%;
+   left: 5%;
+   transform: translateY(-60%);
+ }
+
+ .next {
+   top: 50%;
+   right: 5%;
+   transform: translateY(-60%);
+ }
+
+
+ .container-dots {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+ }
+
+ .dot {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 3px solid #f1f1f1;
+   margin: 0 5px;
+   background: #f1f1f1;
+ }
+
+ .dot.active {
+   background: #6636dd;
+ }
+
+ .swiper {
+   display: none;
+ }
+
+ @media screen and (max-width:500px) {
+   .container-button {
+     display: none;
+   }
+
+   .swiper {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 95%;
+     height: 80vh;
+     color: #fff;
+     margin: 2rem;
+   }
+
+   .swiper-image{
+     height: 60%;
+   }
+
    
 
-  }
+   .swiper-description{
+     max-height: 50%;
+     background-color: rgba(243, 240, 240, 0.1);
+     text-shadow: 1px 1px  rgb(110, 108, 108);
+   }
+   .swiper-title{
+     margin: 0;
+     padding:0.8rem;
+   }
 
-}
+   .swiper_card {
+     max-width: 95%;
+     height: 90%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     border: solid 2px #6636dd;
+     border-radius: 5px;
+   }
+
+   .swiper-text {
+     text-align: justify;
+     margin: 0;
+     padding: 1rem;
+   }
+
+ }

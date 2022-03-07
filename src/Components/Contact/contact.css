@@ -74,13 +74,20 @@
 /*Mobile version*/
 
 @media screen  and (max-width:500px) {
+  .contact-container{
+  justify-content:start;
+  }
+
+  .form-container{
+    max-width:100%;
+  }
 
 
   .input_style{
     background-color:black;
     font-size:1rem;
     font-weight:700;
-    margin: 1rem;  
+    margin: 1.5rem;  
   }
 
   .submitButton{

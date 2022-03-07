@@ -13,49 +13,13 @@ const cardsProjects = [
 
   {
     id: 1,
-    title: 'EN COURS',
+    title: 'WORK IN PROGRESS...',
     description: `Plusieurs projets, sont en cours d'élaboration et dès que l'un d'eux sera terminé vous pourrez y avoir accès via l'intermédiaire du bouton "Découvrir".
-
     Plusieurs technologie seront utilisés et un panel très large d'application seront proposé pour couvrir un large panel de mes compétences.
-    
     Je vous donne rendez-vous très bientôt et si vous avez des idées, suggestions rendez-vous dans la partie Contact et envoyé moi un message.`,
     image: '/assets/images/workInProgress.jpg',
     link: 'www.google.com'
   },
-  {
-    id: 2,
-    title: 'test',
-    description: `Plusieurs projets, sont en cours d'élaboration et dès que l'un d'eux sera terminé vous pourrez y avoir accès via l'intermédiaire du bouton "Découvrir".
-
-    Plusieurs technologie seront utilisés et un panel très large d'application seront proposé pour couvrir un large panel de mes compétences.
-    
-    Je vous donne rendez-vous très bientôt et si vous avez des idées, suggestions rendez-vous dans la partie Contact et envoyé moi un message.`,
-    image: '/assets/images/workInProgress.jpg',
-    link: 'www.google.com'
-  }, 
-  {
-    id: 3,
-    title: 'EN roue libre',
-    description: `Plusieurs projets, sont en cours d'élaboration et dès que l'un d'eux sera terminé vous pourrez y avoir accès via l'intermédiaire du bouton "Découvrir".
-
-    Plusieurs technologie seront utilisés et un panel très large d'application seront proposé pour couvrir un large panel de mes compétences.
-    
-    Je vous donne rendez-vous très bientôt et si vous avez des idées, suggestions rendez-vous dans la partie Contact et envoyé moi un message.`,
-    image: '/assets/images/workInProgress.jpg',
-    link: 'www.google.com'
-  },
-  {
-    id: 4,
-    title: 'test4 poto',
-    description: `Plusieurs projets, sont en cours d'élaboration et dès que l'un d'eux sera terminé vous pourrez y avoir accès via l'intermédiaire du bouton "Découvrir".
-
-    Plusieurs technologie seront utilisés et un panel très large d'application seront proposé pour couvrir un large panel de mes compétences.
-    
-    Je vous donne rendez-vous très bientôt et si vous avez des idées, suggestions rendez-vous dans la partie Contact et envoyé moi un message.`,
-    image: '/assets/images/workInProgress.jpg',
-    link: 'www.google.com'
-  },
-
 
 ];
 
@@ -150,7 +114,7 @@ export default function Slider() {
 
               <div className="slide-right">
                 <h1 className="slide-right-title"> {obj.title} </h1>
-                <p className="slide-right-description"> {obj.description} </p>
+                <p className="slide-right-description"> {obj.description}</p>
                 <button className="slide-right-discover"> Découvrir</button>
               </div>
 
@@ -172,35 +136,36 @@ export default function Slider() {
 
         </div>
       </div>
-       
-       {/* For mobile version */}
 
-          <div className='swiper'>
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
-              >
-              {cardsProjects.map((item) => {
-                return (
+      {/* For mobile version */}
+
+      <div className='swiper'>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          onSlideChange={() => console.log('slide change')}
+        >
+          {cardsProjects.map((item) => {
+            return (
               <SwiperSlide key={item.id}>
-                <div className='swiper_image'>
+                <div className='swiper_card'>
+                  <img className='swiper-image' src={item.image} alt='présentation du projet' />
                   <div className='swiper-description'>
                     <h1 className='swiper-title'>{item.title}</h1>
                     <p className='swiper-text'>{item.description}</p>
                   </div>
                 </div>
-               
-                </SwiperSlide>
-              )})}
-       
 
-            </Swiper>
-        
+              </SwiperSlide>
+            )
+          })}
 
-          </div>
-        
+
+        </Swiper>
+
+
+      </div>
+
     </div>
   )
 }
