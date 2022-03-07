@@ -8,9 +8,11 @@
 
 ## Technologies utilisées :
 
-Pour ce Portfolio j'ai utilisé la librairie React et pour le style je suis partis sur du CSS standard.
+Pour ce Portfolio j'ai utilisé la librairie React et pour le style je suis parti sur du CSS standard.
 
-J'ai utilisé differends packages NPM pour la réalisation de ce Portfolio.
+Je n'ai pas utilisé de Framework css pour la mise en page du portfolio.
+
+J'ai utilisé différends packages NPM pour la réalisation de ce Portfolio.
 
 Pourl a gestion du formulaire de contact j'ai utilisé 2 packages : 
 - react-hook-form [Site Internet](https://react-hook-form.com/), [NPM](https://react-hook-form.com/)
@@ -20,6 +22,7 @@ Pour la gestion du scroll j'ai utilisé le package React-scroll ([GitHub](https:
 
 ## Projets : 
 //TODO
+
 
 
 
