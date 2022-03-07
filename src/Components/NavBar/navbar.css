@@ -34,10 +34,29 @@
 /*************************************/
 
 /*Mobile version*/
-@media screen and (max-width:500px){
-  .nav {
-   display: none;
+ @media screen and (max-width:500px){
+  .nav{
+   float: left;
+   height: 100vh;
+  }
+  .nav-content {
+   background-color:rgba(215, 223, 220,0.4);
+   height:100vh;
+   width:20%;
+   position: absolute;
+   left:0;
+   text-align: center;
+   z-index:2;
+   display:none;
+   
+  }
+
+  .nav_items{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
   
-}
+} 
 

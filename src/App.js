@@ -7,11 +7,13 @@ import HomePage from '../src/Components/HomePage';
 import Projets from '../src/Components/Projets';
 import APropos from '../src/Components/APropos';
 import Contact from './Components/Contact';
+import Toggler from './Components/Toggler';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Toggler />
       <HomePage
       id="accueil"
       />
