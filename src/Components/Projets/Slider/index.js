@@ -13,12 +13,10 @@ const cardsProjects = [
 
   {
     id: 1,
-    title: 'WORK IN PROGRESS...',
-    description: `Plusieurs projets, sont en cours d'élaboration et dès que l'un d'eux sera terminé vous pourrez y avoir accès via l'intermédiaire du bouton "Découvrir".
-    Plusieurs technologie seront utilisés et un panel très large d'application seront proposé pour couvrir un large panel de mes compétences.
-    Je vous donne rendez-vous très bientôt et si vous avez des idées, suggestions rendez-vous dans la partie Contact et envoyé moi un message.`,
-    image: '/assets/images/workInProgress.jpg',
-    link: 'www.google.com'
+    title: 'Backto90s',
+    description: `Blog qui s'intéresse aux années 90, on peut découvrir des articles sur tout ce qui a fait cette décennie, du prince de bel-air en passant par Nirvana. On y parle des phénomènes comme les Pogs, le club Dorothée et bien plus encore.`,
+    image: '/assets/images/logo-white.png',
+    link: 'https://backto90s.netlify.app/'
   },
 
 ];
@@ -107,7 +105,7 @@ export default function Slider() {
 
 
               <div className="slide-left">
-                <img src={process.env.PUBLIC_URL + obj.image} alt="projet" />
+                <img src={process.env.PUBLIC_URL + obj.image} alt="projet" style={{width:'100%',height:'80%', display:'block', padding:'2rem',margin:'0,auto'}} />
               </div>
 
 
@@ -115,7 +113,7 @@ export default function Slider() {
               <div className="slide-right">
                 <h1 className="slide-right-title"> {obj.title} </h1>
                 <p className="slide-right-description"> {obj.description}</p>
-                <button className="slide-right-discover"> Découvrir</button>
+                <button className="slide-right-discover"><a href={obj.link} style={{textDecoration:"none", color:"white"}} target="_blank" rel="noopener noreferrer">Découvrir</a></button>
               </div>
 
 
@@ -149,11 +147,14 @@ export default function Slider() {
             return (
               <SwiperSlide key={item.id}>
                 <div className='swiper_card'>
-                  <img className='swiper-image' src={item.image} alt='présentation du projet' />
+                  <a href={item.link} style={{color:"white",textDecoration:"none" }}>
+                  <img className='swiper-image' src={item.image} alt='présentation du projet' width="100%" height="100%" />
                   <div className='swiper-description'>
                     <h1 className='swiper-title'>{item.title}</h1>
                     <p className='swiper-text'>{item.description}</p>
                   </div>
+
+                  </a>
                 </div>
 
               </SwiperSlide>
